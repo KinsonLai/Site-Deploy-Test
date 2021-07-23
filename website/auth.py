@@ -17,7 +17,7 @@ def login():
             if check_password_hash(user.password, password):
                 flash('Logged in successfully!', category='success')
                 login_user(user, remember=True)
-                if User.first_name == "Rick":
+                if email == "Rick@rickmail.com":
                     return redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
                 else:
                     return redirect(url_for("views.home"))
